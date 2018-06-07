@@ -65,13 +65,24 @@ public class Gym extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        android.support.v4.app.Fragment fragmentito=null;
+        boolean hayFragmento=false;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.Alimentos) {
+            //fragmentito= new Fragmento1();
+            hayFragmento=true;
+
         }
 
-        return super.onOptionsItemSelected(item);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        if(hayFragmento==true) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.layin, fragmentito).commit();
+
+        }
+        return true;
+
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
