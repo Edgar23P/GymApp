@@ -14,7 +14,9 @@ public class BaseDeDatos extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         //crear base de datos
-    
+        String queryTablaMacros =
+        db.execSQL("create table usuario(dni integer primary key, nombre text, ciudad text, numero integer)");
+
     }
 
     @Override
