@@ -7,12 +7,41 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Alimentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:text="Lista de Alimentos"
+        android:textColor="#111111"
         android:textSize="30dp"
-        
+        android:id="@+id/titulo"
         />
+
+    <Button
+        android:id="@+id/btnAgregarAlimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="10dp"
+        android:text="+ Alimento"
+        android:layout_marginLeft="80dp"
+        />
+    <Button
+        android:id="@+id/btnEliliminarAlimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="10dp"
+        android:text="- Alimento"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/btnAgregarAlimento"
+
+        />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Lista"
+        android:layout_below="@id/btnAgregarAlimento"
+
+        ></ListView>
 
 </RelativeLayout>
