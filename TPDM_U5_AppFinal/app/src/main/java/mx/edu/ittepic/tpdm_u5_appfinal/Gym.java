@@ -64,12 +64,21 @@ public class Gym extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+       return true;
+
+
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
         int id = item.getItemId();
         android.support.v4.app.Fragment fragmentito=null;
         boolean hayFragmento=false;
 
         if (id == R.id.Alimentos) {
-            //fragmentito= new Fragmento1();
+            fragmentito= new Frag_Alimentos();
             hayFragmento=true;
 
         }
@@ -80,33 +89,6 @@ public class Gym extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.layin, fragmentito).commit();
 
         }
-        return true;
-
-
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
