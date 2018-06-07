@@ -50,6 +50,28 @@ public class BaseDeDatos extends SQLiteOpenHelper{
                 "POLIINSATURADAS FLOAT," +
                 "SATURADAS FLOAT," +
                 "SODIO FLOAT)");
+        db.close();
+
+        db.execSQL("CREATE TABLE MACRONUTRIENTES (" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "FECHA VARCHAR(50)," +
+                "META VARCHAR(100)," +
+                "PROTEINAS DOUBLE," +
+                "CABOHIDRATOS DOUBLE," +
+                "GRASAS DOUBLE," +
+                "CALORIAS DOUBLE," +
+                "ACTIVO BOOLEAN)");
+        db.close();
+
+        db.execSQL("CREATE TABLE USUARIO (" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "NOMBRE VARCHAR(150)," +
+                "EDAD INT," +
+                "ALTURA DOUBLE," +
+                "PESO DOUBLE," +
+                "SEXO VARCHAR(15))");
+        db.close();
+
     }
 
     @Override
